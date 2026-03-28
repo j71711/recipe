@@ -1,0 +1,88 @@
+{
+  "featured_recipes": [
+    {
+      "id": 1,
+      "title": "Creamy Garlic Pasta",
+      "image": "assets/image/creamy_garlic_pasta.jpg",
+      "category": "Pasta",
+      "rating": 4.8,
+      "cook_time": "25 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 2,
+      "title": "Grilled Chicken Bowl",
+      "image": "assets/image/grilled_chicken_bowl.jpg",
+      "category": "Healthy",
+      "rating": 4.7,
+      "cook_time": "30 min",
+      "difficulty": "Medium"
+    },
+    {
+      "id": 3,
+      "title": "Classic Margherita Pizza",
+      "image": "assets/image/margherita_pizza.jpg",
+      "category": "Pizza",
+      "rating": 4.9,
+      "cook_time": "40 min",
+      "difficulty": "Medium"
+    }
+  ],
+  "popular_meals": [
+    {
+      "id": 101,
+      "title": "Beef Burger",
+      "image": "assets/image/beef_burger.jpg",
+      "category": "Fast Food",
+      "rating": 4.6,
+      "price": 28.0
+    },
+    {
+      "id": 102,
+      "title": "Chicken Shawarma",
+      "image": "assets/image/chicken_shawarma.jpg",
+      "category": "Wraps",
+      "rating": 4.8,
+      "price": 22.0
+    },
+    {
+      "id": 103,
+      "title": "Sushi Platter",
+      "image": "assets/image/sushi_platter.jpg",
+      "category": "Japanese",
+      "rating": 4.9,
+      "price": 45.0
+    }
+  ],
+
+
+  "recommended_recipes": [
+    {
+      "id": 201,
+      "title": "Avocado Toast",
+      "image": "assets/image/avocado_toast.jpg",
+      "category": "Breakfast",
+      "rating": 4.5,
+      "cook_time": "10 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 202,
+      "title": "Chocolate Pancakes",
+      "image": "assets/image/chocolate_pancakes.jpg",
+      "category": "Dessert",
+      "rating": 4.7,
+      "cook_time": "20 min",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 203,
+      "title": "Caesar Salad",
+      "image": "assets/image/caesar_salad.jpg",
+      "category": "Salad",
+      "rating": 4.6,
+      "cook_time": "15 min",
+      "difficulty": "Easy"
+    }
+  ]
+}
