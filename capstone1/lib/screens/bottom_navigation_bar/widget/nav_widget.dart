@@ -8,7 +8,8 @@ class NavItemWidget extends StatelessWidget {
     required this.icon,
     required this.label,
     required this.index,
-    required this.currentIndex, required Null Function() onTap,
+    required this.currentIndex,
+     required this.onTap,
   });
 
   final PageController pageController;
@@ -16,6 +17,7 @@ class NavItemWidget extends StatelessWidget {
   final String label;
   final int index;
   final int currentIndex;
+    final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -27,25 +29,22 @@ class NavItemWidget extends StatelessWidget {
         pageController.jumpToPage(index);
       },
       child: AnimatedContainer(
-        duration:  Duration(milliseconds: 250),
-        padding:  EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        duration: Duration(milliseconds: 250),
+        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         decoration: BoxDecoration(
           color: isSelected
-              ?  Color.fromARGB(255, 0, 26, 109)
+              ? Color.fromARGB(255, 0, 26, 109)
               : Colors.transparent,
           borderRadius: BorderRadius.circular(30),
         ),
         child: Row(
           children: [
-            Icon(
-              icon,
-              color: isSelected ? Colors.white : Colors.black54,
-            ),
+            Icon(icon, color: isSelected ? Colors.white : Colors.black54),
             if (isSelected) ...[
-               Gap(6),
+              Gap(6),
               Text(
                 label,
-                style:  TextStyle(
+                style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
                 ),

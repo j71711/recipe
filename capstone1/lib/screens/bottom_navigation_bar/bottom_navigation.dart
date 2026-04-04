@@ -34,10 +34,10 @@ class BottomNavScreen extends HookWidget {
       ],
       child: BlocBuilder<BottomNavBloc, BottomNavState>(
         builder: (context, state) {
-          int currentIndex = 0;
+          int currentPage = 0;
 
           if (state is CurrentIndexState) {
-            currentIndex = state.currentIndex;
+            currentPage = state.currentIndex;
           }
 
           return Scaffold(
@@ -65,7 +65,7 @@ class BottomNavScreen extends HookWidget {
                       icon: Icons.home_outlined,
                       label: "Home",
                       index: 0,
-                      currentIndex: currentIndex,
+                      currentIndex: currentPage,
                       onTap: () {
                         context.read<BottomNavBloc>().add(ChangePageEvent(0));
                         bottomNavScreenController.animateToPage(
@@ -80,7 +80,7 @@ class BottomNavScreen extends HookWidget {
                       icon: Icons.grid_view_rounded,
                       label: "Category",
                       index: 1,
-                      currentIndex: currentIndex,
+                      currentIndex: currentPage,
                       onTap: () {
                         context.read<BottomNavBloc>().add(ChangePageEvent(1));
                         bottomNavScreenController.animateToPage(
@@ -95,7 +95,7 @@ class BottomNavScreen extends HookWidget {
                       icon: Icons.search,
                       label: "Search",
                       index: 2,
-                      currentIndex: currentIndex,
+                      currentIndex: currentPage,
                       onTap: () {
                         context.read<BottomNavBloc>().add(ChangePageEvent(2));
                         bottomNavScreenController.animateToPage(
@@ -110,7 +110,7 @@ class BottomNavScreen extends HookWidget {
                       icon: Icons.person_outline,
                       label: "Profile",
                       index: 3,
-                      currentIndex: currentIndex,
+                      currentIndex: currentPage,
                       onTap: () {
                         context.read<BottomNavBloc>().add(ChangePageEvent(3));
                         bottomNavScreenController.animateToPage(
