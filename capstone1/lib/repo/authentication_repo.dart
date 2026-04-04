@@ -1,4 +1,4 @@
-import 'package:capstone1/controller/Authentication_contrroler.dart';
+import 'package:capstone1/controller/authentication_controller.dart.dart';
 import 'package:fpdart/fpdart.dart';
 
 class AuthenticationRepo {
@@ -26,7 +26,7 @@ class AuthenticationRepo {
     required String password,
   }) async {
     try {
-      await Future.delayed(const Duration(seconds: 2));
+      await Future.delayed( Duration(seconds: 2));
 
       if (email.isEmpty || password.isEmpty) {
         return Either.left("email and password are required");

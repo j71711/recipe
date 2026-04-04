@@ -16,11 +16,11 @@ class SignUpScreen extends HookWidget {
     final loadingKey = GlobalKey();
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 233, 221, 251),
+      backgroundColor: Color.fromARGB(255, 236, 236, 246),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 233, 221, 251),
+        backgroundColor: Color.fromARGB(255, 236, 236, 246),
         elevation: 0,
-        title: const Text("Sign Up"),
+        title: Text("Sign Up"),
       ),
       body: BlocListener<SignupBloc, SignupState>(
         listener: (context, state) {
@@ -33,16 +33,14 @@ class SignUpScreen extends HookWidget {
             showDialog(
               context: context,
               barrierDismissible: false,
-              builder: (context) => Center(
-                key: loadingKey,
-                child: const CircularProgressIndicator(),
-              ),
+              builder: (context) =>
+                  Center(key: loadingKey, child: CircularProgressIndicator()),
             );
           }
 
           if (state is SignupSuccessState) {
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text("Account created successfully")),
+              SnackBar(content: Text("Account created successfully")),
             );
             context.pop();
           }
@@ -63,7 +61,7 @@ class SignUpScreen extends HookWidget {
                     padding: const EdgeInsets.all(12),
                     child: Text(
                       state.message,
-                      style: const TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -77,8 +75,9 @@ class SignUpScreen extends HookWidget {
             padding: const EdgeInsets.all(16.0),
             child: Sizer(
               builder: (context, orientation, screenType) {
-                final cardSize =
-                    screenType == ScreenType.mobile ? 120.sw : 80.sw;
+                final cardSize = screenType == ScreenType.mobile
+                    ? 120.sw
+                    : 80.sw;
 
                 return Center(
                   child: SingleChildScrollView(
@@ -94,15 +93,15 @@ class SignUpScreen extends HookWidget {
                           padding: const EdgeInsets.all(16.0),
                           child: Column(
                             children: [
-                              const Gap(20),
-                              const Text(
+                              Gap(20),
+                              Text(
                                 "Create Account",
                                 style: TextStyle(
                                   fontSize: 28,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              const Gap(32),
+                              Gap(32),
                               TextField(
                                 controller: emailController,
                                 decoration: InputDecoration(
@@ -113,7 +112,7 @@ class SignUpScreen extends HookWidget {
                                   ),
                                 ),
                               ),
-                              const Gap(16),
+                              Gap(16),
                               TextField(
                                 controller: passwordController,
                                 decoration: InputDecoration(
@@ -124,17 +123,17 @@ class SignUpScreen extends HookWidget {
                                   ),
                                 ),
                               ),
-                              const Gap(24),
+                              Gap(24),
                               SizedBox(
                                 width: 100.w,
                                 height: 7.h,
                                 child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor: const Color.fromARGB(
+                                    backgroundColor: Color.fromARGB(
                                       255,
-                                      132,
-                                      56,
-                                      246,
+                                      53,
+                                      83,
+                                      253,
                                     ),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(20),
@@ -148,16 +147,11 @@ class SignUpScreen extends HookWidget {
                                       ),
                                     );
                                   },
-                                  child: const Text(
+                                  child: Text(
                                     "Sign Up",
                                     style: TextStyle(
                                       fontSize: 16,
-                                      color: Color.fromARGB(
-                                        255,
-                                        245,
-                                        245,
-                                        245,
-                                      ),
+                                      color: Color.fromARGB(255, 245, 245, 245),
                                     ),
                                   ),
                                 ),

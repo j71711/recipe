@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:capstone1/controller/Authentication_contrroler.dart';
+import 'package:capstone1/controller/authentication_controller.dart.dart';
 import 'package:meta/meta.dart';
 part 'forgetpassword_event.dart';
 part 'forgetpassword_state.dart';
@@ -17,7 +17,7 @@ class ForgetPasswordBloc
   ) async {
     emit(ForgotLoading());
 
-    await Future.delayed(const Duration(seconds: 1));
+    await Future.delayed( Duration(seconds: 1));
 
     if (event.email == AuthController.savedEmail) {
       AuthController.savedPassword = event.newPassword;

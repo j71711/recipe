@@ -17,11 +17,11 @@ class ForgotPasswordScreen extends HookWidget {
     final loadingKey = GlobalKey();
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 233, 221, 251),
+      backgroundColor:  Color.fromARGB(255, 236, 236, 246),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 233, 221, 251),
-        elevation: 0,
-        title: const Text("Forgot Password"),
+        backgroundColor:  Color.fromARGB(255, 236, 236, 246),
+
+        title:  Text("Forgot Password"),
       ),
       body: BlocListener<ForgetPasswordBloc, ForgetpasswordState>(
         listener: (context, state) {
@@ -36,14 +36,14 @@ class ForgotPasswordScreen extends HookWidget {
               barrierDismissible: false,
               builder: (context) => Center(
                 key: loadingKey,
-                child: const CircularProgressIndicator(),
+                child:  CircularProgressIndicator(),
               ),
             );
           }
 
           if (state is ForgotSuccess) {
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text("Password changed successfully")),
+               SnackBar(content: Text("Password changed successfully")),
             );
             context.pop();
           }
@@ -95,15 +95,15 @@ class ForgotPasswordScreen extends HookWidget {
                           padding: const EdgeInsets.all(16.0),
                           child: Column(
                             children: [
-                              const Gap(20),
-                              const Text(
+                               Gap(20),
+                               Text(
                                 "Reset Password",
                                 style: TextStyle(
                                   fontSize: 28,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              const Gap(32),
+                               Gap(32),
                               TextField(
                                 controller: emailController,
                                 decoration: InputDecoration(
@@ -114,7 +114,7 @@ class ForgotPasswordScreen extends HookWidget {
                                   ),
                                 ),
                               ),
-                              const Gap(16),
+                               Gap(16),
                               TextField(
                                 controller: newPasswordController,
                                 decoration: InputDecoration(
@@ -125,18 +125,13 @@ class ForgotPasswordScreen extends HookWidget {
                                   ),
                                 ),
                               ),
-                              const Gap(24),
+                               Gap(24),
                               SizedBox(
                                 width: 100.w,
                                 height: 7.h,
                                 child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor: const Color.fromARGB(
-                                      255,
-                                      132,
-                                      56,
-                                      246,
-                                    ),
+                                    backgroundColor:Color.fromARGB(255, 53, 83, 253),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(20),
                                     ),

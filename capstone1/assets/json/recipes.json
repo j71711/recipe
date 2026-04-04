@@ -5,27 +5,65 @@
       "title": "Creamy Garlic Pasta",
       "image": "assets/image/creamy_garlic_pasta.jpg",
       "category": "Pasta",
-      "rating": 4.8,
       "cook_time": "25 min",
-      "difficulty": "Easy"
+      "difficulty": "Easy",
+      "instructions": [
+        "Boil the pasta in salted water until tender.",
+        "Heat butter in a pan and sauté the garlic until fragrant.",
+        "Pour in the cream and stir gently.",
+        "Add parmesan cheese and mix until the sauce becomes creamy.",
+        "Drain the pasta and add it to the sauce.",
+        "Mix well and serve hot."
+      ]
     },
     {
       "id": 2,
       "title": "Grilled Chicken Bowl",
       "image": "assets/image/grilled_chicken_bowl.jpg",
       "category": "Healthy",
-      "rating": 4.7,
       "cook_time": "30 min",
-      "difficulty": "Medium"
+      "difficulty": "Medium",
+      "instructions": [
+        "Season the chicken with salt, pepper, and your favorite spices.",
+        "Grill the chicken until fully cooked and golden.",
+        "Prepare rice or quinoa as the base.",
+        "Chop fresh vegetables like cucumber, tomato, and lettuce.",
+        "Slice the grilled chicken into strips.",
+        "Arrange everything in a bowl and serve with sauce."
+      ]
     },
     {
       "id": 3,
       "title": "Classic Margherita Pizza",
       "image": "assets/image/margherita_pizza.jpg",
       "category": "Pizza",
-      "rating": 4.9,
       "cook_time": "40 min",
-      "difficulty": "Medium"
+      "difficulty": "Medium",
+      "instructions": [
+        "Preheat the oven to a high temperature.",
+        "Roll out the pizza dough on a floured surface.",
+        "Spread tomato sauce evenly over the dough.",
+        "Add fresh mozzarella slices on top.",
+        "Bake until the crust is golden and cheese is melted.",
+        "Top with fresh basil leaves and serve."
+      ]
+    },
+      {
+      "id": 4,
+      "title": "peperoni Pizza",
+      "image": "assets/image/pepperoni_pizza.jpg",
+      "category": "Pizza",
+      "cook_time": "40 min",
+      "difficulty": "Medium",
+      "instructions": [
+        "Preheat the oven to a high temperature.",
+        "Roll out the pizza dough on a floured surface.",
+        "Spread tomato sauce evenly over the dough.",
+        "Add fresh mozzarella slices on top.",
+          "Add fresh peperoni slices on top.",
+        "Bake until the crust is golden and cheese is melted.",
+        "Top with fresh basil leaves and serve."
+      ]
     }
   ],
   "popular_meals": [
@@ -34,55 +72,101 @@
       "title": "Beef Burger",
       "image": "assets/image/beef_burger.jpg",
       "category": "Fast Food",
-      "rating": 4.6,
-      "price": 28.0
+       "cook_time": "25 min",
+           "difficulty": "Easy",
+      "price": 28.0,
+      "instructions": [
+        "Season the beef patty with salt and pepper.",
+        "Cook the patty on a hot grill or pan until done.",
+        "Toast the burger buns lightly.",
+        "Add lettuce, tomato, cheese, and the beef patty to the bun.",
+        "Spread your favorite sauce on top.",
+        "Close the burger and serve warm."
+      ]
     },
     {
       "id": 102,
       "title": "Chicken Shawarma",
       "image": "assets/image/chicken_shawarma.jpg",
       "category": "Wraps",
-      "rating": 4.8,
-      "price": 22.0
+      "price": 22.0,
+        "cook_time": "25 min",
+           "difficulty": "Easy",
+      "instructions": [
+        "Marinate the chicken with shawarma spices and yogurt.",
+        "Cook the chicken in a pan until browned and tender.",
+        "Warm the wrap bread or tortilla.",
+        "Add garlic sauce, pickles, and sliced chicken.",
+        "Roll the wrap tightly.",
+        "Slice and serve immediately."
+      ]
     },
     {
       "id": 103,
       "title": "Sushi Platter",
       "image": "assets/image/sushi_platter.jpg",
       "category": "Japanese",
-      "rating": 4.9,
-      "price": 45.0
+      "price": 45.0,
+        "cook_time": "25 min",
+           "difficulty": "Easy",
+      "instructions": [
+        "Cook sushi rice and let it cool.",
+        "Place a sheet of seaweed on a bamboo mat.",
+        "Spread rice evenly over the seaweed.",
+        "Add your fillings like salmon, cucumber, or avocado.",
+        "Roll tightly and slice into pieces.",
+        "Serve with soy sauce, ginger, and wasabi."
+      ]
     }
   ],
-
-
   "recommended_recipes": [
     {
       "id": 201,
       "title": "Avocado Toast",
       "image": "assets/image/avocado_toast.jpg",
       "category": "Breakfast",
-      "rating": 4.5,
       "cook_time": "10 min",
-      "difficulty": "Easy"
+      "difficulty": "Easy",
+      "instructions": [
+        "Toast the bread slices until golden.",
+        "Mash the avocado in a bowl with salt and pepper.",
+        "Spread the mashed avocado over the toast.",
+        "Add chili flakes or lemon juice if desired.",
+        "Top with eggs or tomatoes if you like.",
+        "Serve fresh."
+      ]
     },
     {
       "id": 202,
       "title": "Chocolate Pancakes",
       "image": "assets/image/chocolate_pancakes.jpg",
       "category": "Dessert",
-      "rating": 4.7,
       "cook_time": "20 min",
-      "difficulty": "Easy"
+      "difficulty": "Easy",
+      "instructions": [
+        "Mix flour, cocoa powder, sugar, milk, and eggs in a bowl.",
+        "Whisk until the batter is smooth.",
+        "Heat a non-stick pan and pour a small amount of batter.",
+        "Cook until bubbles form, then flip.",
+        "Repeat until all batter is used.",
+        "Serve with chocolate sauce or fruits."
+      ]
     },
     {
       "id": 203,
       "title": "Caesar Salad",
       "image": "assets/image/caesar_salad.jpg",
       "category": "Salad",
-      "rating": 4.6,
       "cook_time": "15 min",
-      "difficulty": "Easy"
+      "difficulty": "Easy",
+      "instructions": [
+        "Wash and chop the lettuce.",
+        "Prepare the Caesar dressing or use ready-made dressing.",
+        "Add croutons and parmesan cheese to the lettuce.",
+        "Pour the dressing over the salad.",
+        "Toss everything together well.",
+        "Serve chilled."
+      ]
     }
   ]
 }

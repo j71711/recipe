@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class NavItemWidget extends StatelessWidget {
   const NavItemWidget({
@@ -30,7 +31,7 @@ class NavItemWidget extends StatelessWidget {
         padding:  EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         decoration: BoxDecoration(
           color: isSelected
-              ?  Color.fromARGB(255, 132, 56, 246)
+              ?  Color.fromARGB(255, 0, 26, 109)
               : Colors.transparent,
           borderRadius: BorderRadius.circular(30),
         ),
@@ -41,7 +42,7 @@ class NavItemWidget extends StatelessWidget {
               color: isSelected ? Colors.white : Colors.black54,
             ),
             if (isSelected) ...[
-               SizedBox(width: 6),
+               Gap(6),
               Text(
                 label,
                 style:  TextStyle(

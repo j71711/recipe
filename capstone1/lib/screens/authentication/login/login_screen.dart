@@ -20,14 +20,13 @@ class LoginScreen extends HookWidget {
     final lottieController = useAnimationController();
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 233, 221, 251),
+      backgroundColor:  Color.fromARGB(255, 236, 236, 246),
       body: BlocListener<LoginBloc, LoginState>(
         listener: (context, state) async {
           if (loadingKey.currentContext != null &&
               loadingKey.currentContext!.mounted) {
             Navigator.of(context, rootNavigator: true).pop();
           }
-
           switch (state) {
             case LoginInitial _:
               break;
@@ -38,12 +37,12 @@ class LoginScreen extends HookWidget {
                 barrierDismissible: false,
                 builder: (context) => Center(
                   key: loadingKey,
-                  child: const CircularProgressIndicator(),
+                  child:  CircularProgressIndicator(),
                 ),
               );
               break;
             case SuccessesState _:
-              context.go(RouteKey.homeScreen);
+              context.go(RouteKey.bottomNavScreen);
               break;
 
             case FailedState _:
@@ -62,7 +61,7 @@ class LoginScreen extends HookWidget {
                       padding: const EdgeInsets.all(12),
                       child: Text(
                         state.message,
-                        style: const TextStyle(color: Colors.white),
+                        style:  TextStyle(color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -139,14 +138,14 @@ class LoginScreen extends HookWidget {
                                             RouteKey.forgotPasswordScreen,
                                           );
                                         },
-                                        child: const Text(
+                                        child:  Text(
                                           "Forgot password?",
                                           style: TextStyle(
                                             color: Color.fromARGB(
                                               255,
-                                              132,
-                                              56,
-                                              246,
+                                              53,
+                                              83,
+                                              253,
                                             ),
                                           ),
                                         ),
@@ -161,9 +160,9 @@ class LoginScreen extends HookWidget {
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: Color.fromARGB(
                                           255,
-                                          132,
-                                          56,
-                                          246,
+                                          53,
+                                          83,
+                                          253,
                                         ),
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(
@@ -171,13 +170,17 @@ class LoginScreen extends HookWidget {
                                           ),
                                         ),
                                       ),
+
                                       onPressed: () {
+                                      
+
                                         context.read<LoginBloc>().add(
                                           LoginRequestEvent(
                                             email: emailController.text,
                                             password: passwordController.text,
                                           ),
                                         );
+                                    
                                       },
                                       child: Text(
                                         "login",
@@ -207,9 +210,9 @@ class LoginScreen extends HookWidget {
                                           side: BorderSide(
                                             color: Color.fromARGB(
                                               255,
-                                              132,
-                                              56,
-                                              246,
+                                              53,
+                                              83,
+                                              253,
                                             ),
                                           ),
                                         ),
@@ -224,9 +227,9 @@ class LoginScreen extends HookWidget {
                                           fontSize: 16,
                                           color: Color.fromARGB(
                                             255,
-                                            132,
-                                            56,
-                                            246,
+                                            53,
+                                            83,
+                                            253,
                                           ),
                                         ),
                                       ),

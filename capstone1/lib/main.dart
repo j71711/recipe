@@ -1,4 +1,5 @@
-import 'package:capstone1/core/Configuration.dart';
+
+import 'package:capstone1/core/configuration.dart.dart';
 import 'package:capstone1/routes/route_app.dart';
 import 'package:flutter/material.dart';
 
@@ -17,3 +18,4 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+

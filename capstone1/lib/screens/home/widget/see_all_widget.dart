@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget sectionTitle(String title) {
+Widget seeAllWidget(String title,VoidCallback onTap) {
   
     return Row(
       children: [
@@ -10,17 +10,20 @@ Widget sectionTitle(String title) {
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 46, 43, 95),
+              color:Color.fromARGB(255, 46, 43, 95),
             ),
           ),
         ),
-        Text(
+        InkWell(
+        onTap: onTap,
+        child: Text(
           "See all",
           style: TextStyle(
-            color: Color.fromARGB(255, 123, 97, 255),
+            color:Color.fromARGB(255, 46, 43, 95),
             fontWeight: FontWeight.w600,
           ),
         ),
-      ],
-    );
-  }
+      ),
+    ],
+  );
+}

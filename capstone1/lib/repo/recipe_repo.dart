@@ -1,22 +1,14 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:capstone1/model/recipe_home_model.dart';
+import 'package:capstone1/model/all_recipe_model.dart';
 
 class RecipeRepo {
-  Future<RecipeHomeModel> loadRecipes() async {
-    final jsonString =
-        await rootBundle.loadString('assets/json/recipes.json');
-
-    final Map<String, dynamic> data = jsonDecode(jsonString);
-
-    return RecipeHomeModel.fromMap(data);
-  }
-}
-
-   Future<RecipeHomeModel> loadRecipes() async {
-    final String jsonString = await rootBundle.loadString(
+  Future<AllRecipeModel> loadRecipes() async {
+    //  rootBundle.loadString gives access to your app files (assets)
+    final String loadingData = await rootBundle.loadString(
       'assets/json/recipes.json',
     );
-    final Map<String, dynamic> jsonData = json.decode(jsonString);
-    return RecipeHomeModel.fromMap(jsonData);
+    final Map<String, dynamic> data = json.decode(loadingData);
+    return AllRecipeModel.fromMap(data);
   }
+}
