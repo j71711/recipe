@@ -16,7 +16,6 @@ class CategoryScreen extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 236, 236, 246),
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 236, 236, 246),
-
         centerTitle: true,
         title: Text(
           "Categories",

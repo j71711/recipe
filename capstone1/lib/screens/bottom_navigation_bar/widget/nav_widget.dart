@@ -9,7 +9,7 @@ class NavItemWidget extends StatelessWidget {
     required this.label,
     required this.index,
     required this.currentIndex,
-     required this.onTap,
+    required this.onTap,
   });
 
   final PageController pageController;
@@ -17,7 +17,7 @@ class NavItemWidget extends StatelessWidget {
   final String label;
   final int index;
   final int currentIndex;
-    final VoidCallback onTap;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +25,7 @@ class NavItemWidget extends StatelessWidget {
 
     return InkWell(
       borderRadius: BorderRadius.circular(30),
-      onTap: () {
-        pageController.jumpToPage(index);
-      },
+      onTap: onTap,
       child: AnimatedContainer(
         duration: Duration(milliseconds: 250),
         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
