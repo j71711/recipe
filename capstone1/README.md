@@ -8,9 +8,10 @@ The app provides a clean and modern UI focused on making cooking easier and more
 
 
 
-🎥 Demo
 
-You can watch the app demo in the screenRecord folder.
+https://github.com/user-attachments/assets/23e2f274-c49e-40fa-997a-d46e42b4c710
+
+
 
 ✨ Features
 🍽️ Recipe Browsing
