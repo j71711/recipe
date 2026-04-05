@@ -131,11 +131,7 @@ class LoginScreen extends HookWidget {
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       TextButton(
-                                        onPressed: () {
-                                          context.push(
-                                            RouteKey.forgotPasswordScreen,
-                                          );
-                                        },
+                                        onPressed: () {},
                                         child: Text(
                                           "Forgot password?",
                                           style: TextStyle(
@@ -196,6 +192,7 @@ class LoginScreen extends HookWidget {
                                     width: 100.w,
                                     height: 7.h,
                                     child: ElevatedButton(
+                                      onPressed: () {},
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: Colors.white,
                                         shape: RoundedRectangleBorder(
@@ -212,10 +209,6 @@ class LoginScreen extends HookWidget {
                                           ),
                                         ),
                                       ),
-                                      onPressed: () {
-                                        context.push(RouteKey.signUpScreen);
-                                      },
-
                                       child: Text(
                                         "sign up",
                                         style: TextStyle(
