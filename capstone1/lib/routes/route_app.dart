@@ -1,11 +1,7 @@
 import 'package:capstone1/model/single_recipe_model.dart';
 import 'package:capstone1/routes/route_key.dart';
-import 'package:capstone1/screens/authentication/forget_password/bloc/forgetpassword_bloc.dart';
-import 'package:capstone1/screens/authentication/forget_password/forgetpassword_screen.dart';
 import 'package:capstone1/screens/authentication/login/bloc/login_bloc.dart';
 import 'package:capstone1/screens/authentication/login/login_screen.dart';
-import 'package:capstone1/screens/authentication/signup/bloc/signup_bloc.dart';
-import 'package:capstone1/screens/authentication/signup/signup_screen.dart';
 import 'package:capstone1/screens/bottom_navigation_bar/bottom_navigation.dart';
 import 'package:capstone1/screens/category/bloc/category_bloc.dart';
 import 'package:capstone1/screens/category/category.dart';
@@ -33,21 +29,8 @@ class RouteApp {
           child: LoginScreen(),
         ),
       ),
-      GoRoute(
-        path: RouteKey.signUpScreen,
-        builder: (context, state) => BlocProvider(
-          create: (context) => SignupBloc(GetIt.I.get()),
-          child: SignUpScreen(),
-        ),
-      ),
+  
 
-      GoRoute(
-        path: RouteKey.forgotPasswordScreen,
-        builder: (context, state) => BlocProvider(
-          create: (context) => ForgetPasswordBloc(),
-          child: ForgotPasswordScreen(),
-        ),
-      ),
       GoRoute(
         path: RouteKey.bottomNavScreen,
         builder: (context, state) => BottomNavScreen(),

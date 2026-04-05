@@ -66,8 +66,7 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(18),
                   ),
 
-
-         //-------------search --------------------------         
+                  //-------------search --------------------------
                   child: InkWell(
                     onTap: () {
                       context.push(RouteKey.searchScreen);
@@ -90,7 +89,7 @@ class HomeScreen extends StatelessWidget {
                 ),
 
                 Gap(24),
-  //-------------Featured Recipes --------------------------         
+                //-------------Featured Recipes --------------------------
                 Expanded(
                   child: ListView(
                     padding: EdgeInsets.only(bottom: 100),
@@ -132,7 +131,7 @@ class HomeScreen extends StatelessWidget {
                       ),
 
                       Gap(20),
-  //-------------"Popular Meals  --------------------------     
+                      //-------------"Popular Meals  --------------------------
                       seeAllWidget("Popular Meals", () {
                         context.push(
                           RouteKey.seeAllScreen,
@@ -170,7 +169,7 @@ class HomeScreen extends StatelessWidget {
                       ),
 
                       Gap(20),
-//------------------ Recommended Recipes ------------------
+                      //------------------ Recommended Recipes ------------------
                       seeAllWidget("Recommended Recipes", () {
                         context.push(
                           RouteKey.seeAllScreen,

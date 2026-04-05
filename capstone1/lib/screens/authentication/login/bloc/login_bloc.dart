@@ -11,10 +11,9 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<LoginRequestEvent>(loginMethod);
   }
 
-  
-
   FutureOr<void> loginMethod(
     LoginRequestEvent event,
+    //Emitter is the tool you use to send (emit) a new state from your BLoC to the UI
     Emitter<LoginState> emit,
   ) async {
     emit(LoadingState());
