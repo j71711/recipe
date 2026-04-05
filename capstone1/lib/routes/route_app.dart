@@ -103,8 +103,8 @@ class RouteApp {
       GoRoute(
         path: RouteKey.recipeDetailsScreen,
         builder: (context, state) {
+          //receives recipe from extra
           final recipe = state.extra as SingleRecipeModel?;
-
           if (recipe == null) {
             return Scaffold(body: Center(child: Text("No recipe found")));
           }
@@ -114,8 +114,9 @@ class RouteApp {
       GoRoute(
         path: RouteKey.favoritesScreen,
         builder: (context, state) {
+          //Get the FavoriteCubit that was passed from previous screen
           final favoriteCubit = state.extra as FavoriteCubit;
-
+          //value = reuse existing cubit
           return BlocProvider.value(
             value: favoriteCubit,
             child: FavoritesScreen(),

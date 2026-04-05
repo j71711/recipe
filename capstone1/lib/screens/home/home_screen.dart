@@ -137,7 +137,7 @@ class HomeScreen extends StatelessWidget {
                         context.push(
                           RouteKey.seeAllScreen,
                           extra: {
-                            'title': "Featured Recipes",
+                            'title': "Popular Meals",
                             'recipes': recipes.popularMeals,
                             'favoriteCubit': context.read<FavoriteCubit>(),
                           },

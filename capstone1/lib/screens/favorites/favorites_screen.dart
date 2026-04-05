@@ -29,6 +29,7 @@ class FavoritesScreen extends StatelessWidget {
       body: SafeArea(
         child: BlocBuilder<FavoriteCubit, FavoriteState>(
           builder: (context, state) {
+           // get FavoriteCubit instance
             final cubit = context.read<FavoriteCubit>();
             final List<SingleRecipeModel> favorites = cubit.favorite;
             if (favorites.isEmpty) {
@@ -77,7 +78,7 @@ class FavoritesScreen extends StatelessWidget {
                         );
                       },
                     ),
-                    const Gap(12),
+                     Gap(12),
                   ],
                 );
               },

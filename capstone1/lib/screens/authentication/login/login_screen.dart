@@ -20,7 +20,7 @@ class LoginScreen extends HookWidget {
     final lottieController = useAnimationController();
 
     return Scaffold(
-      backgroundColor:  Color.fromARGB(255, 236, 236, 246),
+      backgroundColor: Color.fromARGB(255, 236, 236, 246),
       body: BlocListener<LoginBloc, LoginState>(
         listener: (context, state) async {
           if (loadingKey.currentContext != null &&
@@ -35,10 +35,8 @@ class LoginScreen extends HookWidget {
               showDialog(
                 context: context,
                 barrierDismissible: false,
-                builder: (context) => Center(
-                  key: loadingKey,
-                  child:  CircularProgressIndicator(),
-                ),
+                builder: (context) =>
+                    Center(key: loadingKey, child: CircularProgressIndicator()),
               );
               break;
             case SuccessesState _:
@@ -61,7 +59,7 @@ class LoginScreen extends HookWidget {
                       padding: const EdgeInsets.all(12),
                       child: Text(
                         state.message,
-                        style:  TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -138,7 +136,7 @@ class LoginScreen extends HookWidget {
                                             RouteKey.forgotPasswordScreen,
                                           );
                                         },
-                                        child:  Text(
+                                        child: Text(
                                           "Forgot password?",
                                           style: TextStyle(
                                             color: Color.fromARGB(
@@ -172,15 +170,12 @@ class LoginScreen extends HookWidget {
                                       ),
 
                                       onPressed: () {
-                                      
-
                                         context.read<LoginBloc>().add(
                                           LoginRequestEvent(
                                             email: emailController.text,
                                             password: passwordController.text,
                                           ),
                                         );
-                                    
                                       },
                                       child: Text(
                                         "login",

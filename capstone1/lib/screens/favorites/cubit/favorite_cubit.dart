@@ -6,7 +6,7 @@ part 'favorite_state.dart';
 
 class FavoriteCubit extends Cubit<FavoriteState> {
   FavoriteCubit() : super(FavoriteInitial());
-
+// //When I call favorite ,give me current favorites list
   List<SingleRecipeModel> get favorite {
     if (state is SuccessFavoriteState) {
       return (state as SuccessFavoriteState).favorites;

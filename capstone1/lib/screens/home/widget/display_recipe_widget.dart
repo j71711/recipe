@@ -6,20 +6,21 @@ import 'package:gap/gap.dart';
 
 class DisplayRecipeCard extends StatelessWidget {
   final SingleRecipeModel recipe;
-  final VoidCallback? onTap;
+  final VoidCallback onTap;
 
   const DisplayRecipeCard({
     super.key,
     required this.recipe,
-    this.onTap,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<FavoriteCubit, FavoriteState>(
       builder: (context, state) {
-        final favorites =
-            state is SuccessFavoriteState ? state.favorites : <SingleRecipeModel>[];
+        final favorites = state is SuccessFavoriteState
+            ? state.favorites
+            : <SingleRecipeModel>[];
 
         final isFav = favorites.any((item) => item.id == recipe.id);
 
@@ -51,14 +52,6 @@ class DisplayRecipeCard extends StatelessWidget {
                         width: double.infinity,
                         height: 90,
                         fit: BoxFit.cover,
-                        errorBuilder: (context, error, stackTrace) {
-                          return Container(
-                            width: double.infinity,
-                            height: 90,
-                            color: Colors.grey.shade200,
-                            child: const Icon(Icons.broken_image),
-                          );
-                        },
                       ),
                     ),
                     Positioned(
@@ -86,11 +79,9 @@ class DisplayRecipeCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Gap(6),
+                 Gap(6),
                 Text(
                   recipe.title,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
@@ -100,8 +91,6 @@ class DisplayRecipeCard extends StatelessWidget {
                 const Gap(4),
                 Text(
                   recipe.category,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 12,
                     color: Color.fromARGB(255, 8, 2, 89),
