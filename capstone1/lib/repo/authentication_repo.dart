@@ -21,27 +21,4 @@ class AuthenticationRepo {
     }
   }
 
-  Future<Either<String, String>> signUp({
-    required String email,
-    required String password,
-  }) async {
-    try {
-      await Future.delayed( Duration(seconds: 2));
-
-      if (email.isEmpty || password.isEmpty) {
-        return Either.left("email and password are required");
-      }
-
-      if (AuthController.savedEmail == email) {
-        return Either.left("account already exists");
-      }
-
-      AuthController.savedEmail = email;
-      AuthController.savedPassword = password;
-
-      return Either.right("account created");
-    } catch (error) {
-      return Either.left("there is error with signup");
-    }
-  }
 }
