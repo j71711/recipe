@@ -37,9 +37,7 @@ class ProfileScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(24),
-                boxShadow: [
-                  BoxShadow(color: Colors.black.withAlpha(10), blurRadius: 10),
-                ],
+                boxShadow: kElevationToShadow[2],
               ),
               child: Column(
                 children: [

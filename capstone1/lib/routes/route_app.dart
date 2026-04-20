@@ -1,7 +1,7 @@
 import 'package:capstone1/model/single_recipe_model.dart';
 import 'package:capstone1/routes/route_key.dart';
-import 'package:capstone1/screens/authentication/login/bloc/login_bloc.dart';
-import 'package:capstone1/screens/authentication/login/login_screen.dart';
+import 'package:capstone1/screens/login/bloc/login_bloc.dart';
+import 'package:capstone1/screens/login/login_screen.dart';
 import 'package:capstone1/screens/bottom_navigation_bar/bottom_navigation.dart';
 import 'package:capstone1/screens/category/bloc/category_bloc.dart';
 import 'package:capstone1/screens/category/category.dart';

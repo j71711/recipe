@@ -10,7 +10,7 @@ class AllRecipeModel {
     required this.popularMeals,
     required this.recommendedRecipes,
   });
-// //Iterable
+// // iterable
   factory AllRecipeModel.fromMap(Map<String, dynamic> map) {
     return AllRecipeModel(
       featuredRecipes: ((map['featured_recipes'] ) as List)

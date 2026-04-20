@@ -32,13 +32,7 @@ class DisplayRecipeCard extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: .05),
-                  blurRadius: 8,
-                  offset: const Offset(0, 4),
-                ),
-              ],
+              boxShadow: kElevationToShadow[2],
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

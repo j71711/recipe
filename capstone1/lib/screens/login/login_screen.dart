@@ -1,6 +1,6 @@
 import 'package:capstone1/routes/route_key.dart';
-import 'package:capstone1/screens/authentication/login/bloc/login_bloc.dart';
-import 'package:capstone1/screens/authentication/login/widget/textfield_widget.dart';
+import 'package:capstone1/screens/login/bloc/login_bloc.dart';
+import 'package:capstone1/screens/login/widget/textfield_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -25,12 +25,9 @@ class LoginScreen extends HookWidget {
         listener: (context, state) async {
           if (loadingKey.currentContext != null &&
               loadingKey.currentContext!.mounted) {
-            Navigator.of(context, rootNavigator: true).pop();
+           context.pop();
           }
           switch (state) {
-            case LoginInitial _:
-              break;
-
             case LoadingState _:
               showDialog(
                 context: context,

@@ -7,7 +7,7 @@ part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final AuthenticationRepo authRepo;
-  LoginBloc(this.authRepo) : super(LoginInitial()) {
+  LoginBloc(this.authRepo) : super(LoadingState()) {
     on<LoginRequestEvent>(loginMethod);
   }
 
@@ -26,5 +26,4 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       },
     );
   }
-  
 }

@@ -24,9 +24,10 @@ class SearchCubit extends Cubit<SearchState> {
 
   void search(String value) {
     //------ stop the function--------
-    // return Iterable  where
+    //Because only SearchLoadedState has the data:allRecipes
     if (state is! SearchLoadedState) return;
     final currentState = state as SearchLoadedState;
+   // // return Iterable  where
     final results = currentState.allRecipes.where((recipe) {
       final title = recipe.title.toLowerCase();
       final input = value.toLowerCase();

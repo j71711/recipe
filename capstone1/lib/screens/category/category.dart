@@ -13,11 +13,11 @@ class CategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 236, 236, 246),
+      backgroundColor: const Color.fromARGB(255, 236, 236, 246),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 236, 236, 246),
+        backgroundColor: const Color.fromARGB(255, 236, 236, 246),
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Categories",
           style: TextStyle(
             color: Color.fromARGB(255, 47, 44, 97),
@@ -29,17 +29,8 @@ class CategoryScreen extends StatelessWidget {
         future: RecipeRepo().loadRecipes(),
         builder: (context, result) {
           if (result.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
-
-          if (result.hasError) {
-            return Center(child: Text(result.error.toString()));
-          }
-
-          if (!result.hasData) {
-            return Center(child: Text("No data"));
-          }
-
           final data = result.data!;
 
           final allRecipes = [
@@ -48,18 +39,20 @@ class CategoryScreen extends StatelessWidget {
             ...data.recommendedRecipes,
           ];
 
-          final categories = allRecipes.map((e) => e.category).toSet().toList();
+          final categories =                                                                    
+              allRecipes.map((e) => e.category).toSet().toList();
 
           return ListView.separated(
             padding: const EdgeInsets.all(16),
             itemCount: categories.length,
-            separatorBuilder: (context, index) => Gap( 14),
+            separatorBuilder: (context, index) => const Gap(14),
             itemBuilder: (context, index) {
               final category = categories[index];
 
-              final filtered = allRecipes
-                  .where((e) => (e.category) == category)
-                  .toList();
+              final filtered =
+                  allRecipes.where((e) => e.category == category).toList();
+
+              final recipe = filtered.first;
 
               return InkWell(
                 borderRadius: BorderRadius.circular(22),
@@ -76,32 +69,36 @@ class CategoryScreen extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 18,
-                    vertical: 20,
+                    vertical: 16,
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(22),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withAlpha(12),
-                        blurRadius: 10,
-                        offset: Offset(0, 4),
-                      ),
-                    ],
+                    boxShadow: kElevationToShadow[2],
                   ),
                   child: Row(
                     children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Image.asset(
+                          recipe.image,
+                          width: 45,
+                          height: 45,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      const Gap(12),
                       Expanded(
                         child: Text(
                           category,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
                             color: Color.fromARGB(255, 23, 19, 99),
                           ),
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.arrow_forward_ios_rounded,
                         size: 18,
                         color: Color.fromARGB(255, 17, 14, 87),

@@ -13,6 +13,9 @@ class FavoritesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    //!-------
+     final cubit = context.read<FavoriteCubit>();
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 236, 236, 246),
       appBar: AppBar(
@@ -30,7 +33,7 @@ class FavoritesScreen extends StatelessWidget {
         child: BlocBuilder<FavoriteCubit, FavoriteState>(
           builder: (context, state) {
            // get FavoriteCubit instance
-            final cubit = context.read<FavoriteCubit>();
+           
             final List<SingleRecipeModel> favorites = cubit.favorite;
             if (favorites.isEmpty) {
               return Center(
