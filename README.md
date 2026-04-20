@@ -1,49 +1,66 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/MP9hPbTU)
-# 🚀 Capstone I: Project Requirements & Guidelines
+## 📿 Recipe App
 
-Welcome to your first Capstone! This is where you move from learning basics to building a real, professional-grade application. To succeed in this project, you must follow the technical and structural rules below.
+Recipe App is a Flutter application designed to help users discover, explore, and manage their favorite recipes in a simple and elegant way.
 
-### 📌 General Rules
-**No AI Tools:** The use of Ai (e:ChatGPT, GitHub Copilot,Gemini ) or any AI for code generation is strictly prohibited. 
-We want to see your logic and your problem-solving skills ⭐.
+The app focuses on providing a clean UI and smooth user experience to make cooking easier and more enjoyable.
 
-**📌Project Scope:** Your app must contain at least 8 functional pages.
+## features
+Home Screen
+Recipe Details
+Search
+Favorites
+✨ Features
+🍽️ Recipe Browsing
+Browse recipes by categories
+View featured, popular, and recommended meals
+Clean and well-organized layout
+🔍 Search
+Search recipes by name
+Instant filtering while typing
+Fast and responsive experience
+❤️ Favorites
+Add/remove recipes from favorites
+View all favorite recipes in one place
+Shared state across the entire app
+📄 Recipe Details
+View recipe image and title
+Display category, cooking time, and difficulty
+Step-by-step cooking instructions
+🧭 Navigation
+Bottom navigation bar for easy access
+Smooth page transitions
+Structured navigation using GoRouter
+🎨 UI & Theme
+Clean and modern design
+Soft and consistent color palette
+Reusable UI components
+## 🧱 Project Structure
+lib
+┣ controller
+┣ core
+┃ ┗ configuration
+┣ model
+┣ repo
+┣ routes
+┣ screens
+┃ ┣ authentication
+┃ ┣ bottom_navigation_bar
+┃ ┣ category
+┃ ┣ favorites
+┃ ┣ home
+┃ ┣ profile
+┃ ┣ recipes
+┃ ┣ search
+┃ ┗ see_all
+┗ main.dart
+## 🛠️ Technologies Used
+Flutter
+Dart
+BLoC (State Management)
+GoRouter (Navigation)
+Lottie (Animations)
+JSON (Local Data Storage)
 
-**📝Note:** All Auth pages (Login, Signup, Reset Password) together count as 1 page.
+👩🏻‍💻 Developed By
 
-**📝Note:** The Splash screen and Loading screens do not count toward the 8-page total.
-
-**📌Design & Idea:** The app must have a creative idea and a high-quality UI/UX design.
-
-**💡Tip:** You are allowed to Clone a famous existing app (like Instagram, Spotify, etc.) to practice high-end UI recreation.
-
----
-
-### 🛠 Technical Requirements
-To pass the technical review, your code must be "Clean" and follow industry standards:
-
-**📌State Management:** You must use BLoC.
-
-**📌Navigation:** You must use GoRouter for all app routing and navigation.
-
-**📌Dependency Injection:** You must use GetIt for service location and managing your logic.
-
-**📌Code Quality:** * Follow Best Practices (Clean Architecture or Layered folders).
-* Your code must be organized, readable, and easy to follow.
-
-**⚠️Avoid "Spaghetti Code"**—keep your UI separate from your business logic.
-
----
-
-### 💡 Summary Checklist
-- [ ] At least 8 main pages (excluding Splash/Loading).
-- [ ] Auth flow implemented (counts as 1 page).
-- [ ] Built using BLoC + GetIt.
-- [ ] Navigation handled via GoRouter.
-- [ ] Professional and polished UI design.
-- [ ] No AI-generated code.
-- [ ] Clean folder structure.
-
----
-
-Good luck to everyone! We are excited to see the amazing apps you'll build.🥳
+Jalnar Alharthi
