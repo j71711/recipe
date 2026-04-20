@@ -1,4 +1,3 @@
-import 'package:capstone1/controller/authentication_controller.dart.dart';
 import 'package:fpdart/fpdart.dart';
 
 class AuthenticationRepo {
@@ -10,8 +9,8 @@ class AuthenticationRepo {
       final String token = "lakdfsjgnlasdf09kidd-3,kasha94nsdpffuqeb";
       await Future.delayed(Duration(seconds: 2));
 
-      if (email == AuthController.savedEmail &&
-          password == AuthController.savedPassword) {
+      if (email == "jalnar@gmail.com" &&
+          password == "1234") {
         return Either.right(token);
       }
 
@@ -22,3 +21,4 @@ class AuthenticationRepo {
   }
 
 }
+
