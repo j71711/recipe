@@ -61,6 +61,15 @@ GoRouter (Navigation)
 Lottie (Animations)
 JSON (Local Data Storage)
 
+## demo
+
+https://github.com/user-attachments/assets/af10514e-e73a-4c66-a582-6b0d56b32db5
+
+
+https://github.com/user-attachments/assets/f3181263-b9f4-4303-8b1a-e33d8753eaa4
+
+
+
 👩🏻‍💻 Developed By
 
 Jalnar Alharthi
